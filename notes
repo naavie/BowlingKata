@@ -1,1 +1,29 @@
-A unit test is 
+Golang Learning Notes
+
+- go env GOPATH  
+- cd = Change directory 
+- mkdir = Make new directory  
+
+- The first line in a Golang program must be the name of the package. 	
+- Every package needs to have the package name “main” 
+
+Variables: 
+- When variables are given an initial value, the short hand syntax is as follows: 
+    - Remove the “val” and replace the “int” or whatever data type it is and use “:=“ instead
+
+- An array holds multiple elements of the same type but the number of elements it holds is fixed. It has a specific length. 
+- Arrays are 0 index so the first element starts at “0”. 
+- Slices are an abstraction of top of arrays to make them easier to work with. Slices don’t have a fixed number of elements. 
+- So for instance, if you wanted to create a slice of integers instead of an array of integers, simply remove the element count and leave empty square brackets []
+
+- The append functions can add more values to add something new to the end of a slice. Append does not modify the original slice, it returns a new one. 
+
+- Maps are key-value pairs and are similar to dictionaries in Python.
+    - To make a map use, variablename := make(map[data type 1]datatype2)
+- The “delete” function can be used to delete something from a map 
+
+
+
+
+On Mac: 
+- go run “filename.go” to execute and run a go file in a terminal. 
