@@ -21,18 +21,12 @@ const (
 
 // Bowling Game Data
 type Game struct {
-	rolls        int
-	initscore    int
-	currentscore int
-	playername   string
+	score int
 }
 
 // New Game - No Players Yet
-func NewBowlingGame() *Game {
-	return &Game{
-		rolls:        maxrollsperframe, // how do we handle the last frame? maxrollsperframe + 1?
-		initscore:    0,
-		currentscore: 0,
-		playername:   "",
+func NewBowlingGame(scorecard string) Game {
+	return Game{
+		score: 10,
 	}
 }
