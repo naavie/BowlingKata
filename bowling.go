@@ -9,7 +9,7 @@ const (
 	maxpins = 10
 	// Final score cannot be greater than 300 point.
 	maxscore = 300
-	// Frames
+	// Maximum Number of Frames per game.
 	frames = 10
 	// Max Rolls Per Frame
 	maxrollsperframe = 2

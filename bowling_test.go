@@ -93,7 +93,7 @@ func TestWhenNinePinsAreKnockedAtTheBegginingOfTheGameTheScoreShouldBeNine(t *te
 	}
 }
 
-// Unit Test for 1 Frame, 9 bowling pin knocked
+// Unit Test for 1 Frame, 10 bowling pin knocked
 func TestWhenTenPinsAreKnockedAtTheBegginingOfTheGameTheScoreShouldBeTen(t *testing.T) {
 	var actual int = NewBowlingGame("10- -- -- -- -- -- -- -- -- --").score
 	if actual != 10 {

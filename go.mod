@@ -1,3 +1,3 @@
 module github.com/sjn88/navsbowlinggame
 
-go 1.17
+go 1.18
