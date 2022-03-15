@@ -11,12 +11,12 @@ func TestBowling(t *testing.T) {
 	}
 }
 
-// Perfect Score Test
-func PerfectScore(t *testing.T) {
-	if 300 != maxscore { //placeholder
-		t.Error("You did not get a perfect score this game but good try!")
-	}
-}
+// // Perfect Score Test
+// func PerfectScore(t *testing.T) {
+// 	if 300 != maxscore { //placeholder
+// 		t.Error("You did not get a perfect score this game but good try!")
+// 	}
+// }
 
 // Unit Test for 1 Frame, 1 bowling pin knocked
 

@@ -1,3 +1,3 @@
-module github.com/sjn88/navsbowlinggame
+module github.com/naavie/BowlingKata
 
 go 1.18
