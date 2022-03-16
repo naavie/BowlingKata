@@ -18,7 +18,7 @@ func TestBowling(t *testing.T) {
 // 	}
 // }
 
-// Unit Test for 1 Frame, 1 bowling pin knocked
+//Unit Test for 1 Frame, 1 bowling pin knocked
 
 func TestWhenOnePinIsKnockedAtTheBegginingOfTheGameTheScoreShouldBeOne(t *testing.T) {
 	var actual int = NewBowlingGame("1- -- -- -- -- -- -- -- -- --").score
