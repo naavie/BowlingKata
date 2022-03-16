@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func test() {
+func BowlingGameVersion2(scorecard string, score int) Game {
 	newgame := make(map[string]int)
 
 	//Frame 1: Two Rolls
@@ -48,4 +48,6 @@ func test() {
 	newgame["secondRollTenthFrame"] = 0
 
 	fmt.Println(newgame)
+
+	return Game{}
 }
