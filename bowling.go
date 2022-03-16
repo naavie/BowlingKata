@@ -1,8 +1,9 @@
 package main
 
-// import (
-// 	"fmt"
-// )
+import (
+	"fmt"
+	"strconv"
+)
 
 // contstants
 
@@ -28,8 +29,13 @@ type Game struct {
 
 // New Game - No Players Yet
 func NewBowlingGame(scorecard string) Game {
+	rune1 := []rune(scorecard)[0]
+	runestring := string(rune1)
+	fmt.Print(runestring)
+	val, _ := strconv.Atoi(runestring)
+
 	return Game{
-		score: 1,
+		score: val,
 	}
 }
 
