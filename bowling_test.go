@@ -30,7 +30,7 @@ func TestWhenOnePinIsKnockedAtTheBegginingOfTheGameTheScoreShouldBeOne(t *testin
 
 // Unit Test for 1 Frame, 2 bowling pin knocked
 func TestWhenTwoPinsAreKnockedAtTheBegginingOfTheGameTheScoreShouldBeTwo(t *testing.T) {
-	actual := NewBowlingGame("1- -- -- -- -- -- -- -- -- --").score
+	actual := NewBowlingGame("2- -- -- -- -- -- -- -- -- --").score
 	if actual != 2 {
 		t.Errorf("Expected %v but got %v", 2, actual)
 	}
@@ -39,7 +39,7 @@ func TestWhenTwoPinsAreKnockedAtTheBegginingOfTheGameTheScoreShouldBeTwo(t *test
 
 // Unit Test for 1 Frame, 3 bowling pin knocked
 func TestWhenThreePinsAreKnockedAtTheBegginingOfTheGameTheScoreShouldBeThree(t *testing.T) {
-	actual := NewBowlingGame("1- -- -- -- -- -- -- -- -- --").score
+	actual := NewBowlingGame("3- -- -- -- -- -- -- -- -- --").score
 	if actual != 3 {
 		t.Errorf("Expected %v but got %v", 3, actual)
 	}
@@ -47,7 +47,7 @@ func TestWhenThreePinsAreKnockedAtTheBegginingOfTheGameTheScoreShouldBeThree(t *
 
 // Unit Test for 1 Frame, 4 bowling pin knocked
 func TestWhenFourPinsAreKnockedAtTheBegginingOfTheGameTheScoreShouldBeFour(t *testing.T) {
-	actual := NewBowlingGame("1- -- -- -- -- -- -- -- -- --").score
+	actual := NewBowlingGame("4- -- -- -- -- -- -- -- -- --").score
 	if actual != 4 {
 		t.Errorf("Expected %v but got %v", 4, actual)
 	}
@@ -55,7 +55,7 @@ func TestWhenFourPinsAreKnockedAtTheBegginingOfTheGameTheScoreShouldBeFour(t *te
 
 // Unit Test for 1 Frame, 5 bowling pin knocked
 func TestWhenFivePinsAreKnockedAtTheBegginingOfTheGameTheScoreShouldBeFive(t *testing.T) {
-	actual := NewBowlingGame("1- -- -- -- -- -- -- -- -- --").score
+	actual := NewBowlingGame("5- -- -- -- -- -- -- -- -- --").score
 	if actual != 5 {
 		t.Errorf("Expected %v but got %v", 5, actual)
 	}
@@ -63,7 +63,7 @@ func TestWhenFivePinsAreKnockedAtTheBegginingOfTheGameTheScoreShouldBeFive(t *te
 
 // Unit Test for 1 Frame, 6 bowling pin knocked
 func TestWhenSixPinsAreKnockedAtTheBegginingOfTheGameTheScoreShouldBeSix(t *testing.T) {
-	actual := NewBowlingGame("1- -- -- -- -- -- -- -- -- --").score
+	actual := NewBowlingGame("6- -- -- -- -- -- -- -- -- --").score
 	if actual != 6 {
 		t.Errorf("Expected %v but got %v", 6, actual)
 	}
@@ -71,7 +71,7 @@ func TestWhenSixPinsAreKnockedAtTheBegginingOfTheGameTheScoreShouldBeSix(t *test
 
 // Unit Test for 1 Frame, 7 bowling pin knocked
 func TestWhenSevenPinsAreKnockedAtTheBegginingOfTheGameTheScoreShouldBeSeven(t *testing.T) {
-	actual := NewBowlingGame("1- -- -- -- -- -- -- -- -- --").score
+	actual := NewBowlingGame("7- -- -- -- -- -- -- -- -- --").score
 	if actual != 7 {
 		t.Errorf("Expected %v but got %v", 7, actual)
 	}
@@ -79,7 +79,7 @@ func TestWhenSevenPinsAreKnockedAtTheBegginingOfTheGameTheScoreShouldBeSeven(t *
 
 // Unit Test for 1 Frame, 8 bowling pin knocked
 func TestWhenEightPinsAreKnockedAtTheBegginingOfTheGameTheScoreShouldBeEight(t *testing.T) {
-	actual := NewBowlingGame("1- -- -- -- -- -- -- -- -- --").score
+	actual := NewBowlingGame("8- -- -- -- -- -- -- -- -- --").score
 	if actual != 8 {
 		t.Errorf("Expected %v but got %v", 8, actual)
 	}
@@ -87,7 +87,7 @@ func TestWhenEightPinsAreKnockedAtTheBegginingOfTheGameTheScoreShouldBeEight(t *
 
 // Unit Test for 1 Frame, 9 bowling pin knocked
 func TestWhenNinePinsAreKnockedAtTheBegginingOfTheGameTheScoreShouldBeNine(t *testing.T) {
-	actual := NewBowlingGame("1- -- -- -- -- -- -- -- -- --").score
+	actual := NewBowlingGame("9- -- -- -- -- -- -- -- -- --").score
 	if actual != 9 {
 		t.Errorf("Expected %v but got %v", 9, actual)
 	}
@@ -95,18 +95,18 @@ func TestWhenNinePinsAreKnockedAtTheBegginingOfTheGameTheScoreShouldBeNine(t *te
 
 // Unit Test for 1 Frame, 10 bowling pin knocked
 func TestWhenTenPinsAreKnockedAtTheBegginingOfTheGameTheScoreShouldBeTen(t *testing.T) {
-	actual := NewBowlingGame("1- -- -- -- -- -- -- -- -- --").score
+	actual := NewBowlingGame("X- -- -- -- -- -- -- -- -- --").score
 	if actual != 10 {
 		t.Errorf("Expected %v but got %v", 10, actual)
 	}
 }
 
-func Test_V2_OnePinOneFrame(t *testing.T) {
-	actual := BowlingGameVersion2("firstRollFirstFrame", 0).newgame()
-	if actual != 5 {
-		t.Errorf("Expected %v but got %v", 5, actual)
-	}
-}
+// func Test_V2_OnePinOneFrame(t *testing.T) {
+// 	actual := BowlingGameVersion2("firstRollFirstFrame", 0).newgame()
+// 	if actual != 5 {
+// 		t.Errorf("Expected %v but got %v", 5, actual)
+// 	}
+// }
 
 // // These are not tests, they are features.
 // func ScoreTests() {
