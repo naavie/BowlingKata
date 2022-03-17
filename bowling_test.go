@@ -11,13 +11,6 @@ func TestBowling(t *testing.T) {
 	}
 }
 
-// // Perfect Score Test
-// func PerfectScore(t *testing.T) {
-// 	if 300 != maxscore { //placeholder
-// 		t.Error("You did not get a perfect score this game but good try!")
-// 	}
-// }
-
 //Unit Test for 1 Frame, 1 bowling pin knocked
 
 func TestWhenOnePinIsKnockedAtTheBegginingOfTheGameTheScoreShouldBeOne(t *testing.T) {
@@ -95,11 +88,16 @@ func TestWhenNinePinsAreKnockedAtTheBegginingOfTheGameTheScoreShouldBeNine(t *te
 
 // Unit Test for 1 Frame, 10 bowling pin knocked
 func TestWhenTenPinsAreKnockedAtTheBegginingOfTheGameTheScoreShouldBeTen(t *testing.T) {
+<<<<<<< Updated upstream
 	actual := NewBowlingGame("1- -- -- -- -- -- -- -- -- --").score
+=======
+	actual := NewBowlingGame("10- -- -- -- -- -- -- -- -- --").score
+>>>>>>> Stashed changes
 	if actual != 10 {
 		t.Errorf("Expected %v but got %v", 10, actual)
 	}
 }
+<<<<<<< Updated upstream
 
 func Test_V2_OnePinOneFrame(t *testing.T) {
 	actual := BowlingGameVersion2("firstRollFirstFrame", 0).newgame()
@@ -118,3 +116,5 @@ func Test_V2_OnePinOneFrame(t *testing.T) {
 // 		fmt.Println("Please play the game again.")
 // 	}
 // }
+=======
+>>>>>>> Stashed changes
