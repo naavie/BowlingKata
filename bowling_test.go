@@ -88,33 +88,8 @@ func TestWhenNinePinsAreKnockedAtTheBegginingOfTheGameTheScoreShouldBeNine(t *te
 
 // Unit Test for 1 Frame, 10 bowling pin knocked
 func TestWhenTenPinsAreKnockedAtTheBegginingOfTheGameTheScoreShouldBeTen(t *testing.T) {
-<<<<<<< Updated upstream
-	actual := NewBowlingGame("1- -- -- -- -- -- -- -- -- --").score
-=======
-	actual := NewBowlingGame("10- -- -- -- -- -- -- -- -- --").score
->>>>>>> Stashed changes
+	actual := NewBowlingGame("X- -- -- -- -- -- -- -- -- --").score
 	if actual != 10 {
 		t.Errorf("Expected %v but got %v", 10, actual)
 	}
 }
-<<<<<<< Updated upstream
-
-func Test_V2_OnePinOneFrame(t *testing.T) {
-	actual := BowlingGameVersion2("firstRollFirstFrame", 0).newgame()
-	if actual != 5 {
-		t.Errorf("Expected %v but got %v", 5, actual)
-	}
-}
-
-// // These are not tests, they are features.
-// func ScoreTests() {
-// 	if NewBowlingGame().currentscore == maxscore {
-// 		fmt.Println("Congratulations", NewBowlingGame().playername, "you had a perfect game!")
-// 	}
-
-// 	if NewBowlingGame().currentscore == 0 {
-// 		fmt.Println("Please play the game again.")
-// 	}
-// }
-=======
->>>>>>> Stashed changes
