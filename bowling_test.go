@@ -93,9 +93,19 @@ func TestWhenTenPinsAreKnockedAtTheBegginingOfTheGameTheScoreShouldBeTen(t *test
 		t.Errorf("Expected %v but got %v", 10, actual)
 	}
 }
+
 func TestWhenXPinsAreKnockedDownInFrameOne(t *testing.T) {
-	TotalRolls := []int{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+	TotalRolls := []int{0, 0}
 	for i := 0; i <= 9; i++ {
 		t.Errorf("Expected %v but got %v", i, TotalRolls)
+	}
+}
+
+func TestXPinsKockedInFrameOne(t *testing.T) {
+	actual := NewBowlingGame("1- -- -- -- -- -- -- -- -- --").score
+	for i := 0; i <= 9; i++ {
+		if actual != i {
+			t.Errorf("Expected %v but got %v", i, actual)
+		}
 	}
 }
