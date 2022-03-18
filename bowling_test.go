@@ -94,7 +94,7 @@ func TestWhenTenPinsAreKnockedAtTheBegginingOfTheGameTheScoreShouldBeTen(t *test
 	}
 }
 func TestWhenXPinsAreKnockedDownInFrameOne(t *testing.T) {
-	TotalRolls := []int{0, 0, 2, 0, 3, 0, 4, 0, 5, 0, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+	TotalRolls := []int{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 	for i := 0; i <= 9; i++ {
 		t.Errorf("Expected %v but got %v", i, TotalRolls)
 	}

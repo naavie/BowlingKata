@@ -38,20 +38,41 @@ func NewBowlingGame(scorecard string) Game2 {
 
 //  Sean's code above
 
-// Spare Function
-func isSpare(rollOne int, rollTwo int) bool {
-	scorePerFrame := rollOne + rollTwo
-	booleanVal := false
-	if scorePerFrame == 10 {
-		booleanVal = true
+// ----------------------------------------------------------------------------------------------
+
+type Game struct {
+	TotalRolls [21]int
+	current    int
+}
+
+// trying to figure out how to iterate to the next frame. Since each frame has two pins, it needs to iterate over two int values
+func (game *Game) playerScore() int {
+	score := 0            //initial score when game starts
+	iterateNextFrame := 0 // this variable will be used to iterate to the next frame after the existing frame has been completed
+	for frameIndex := 0; frameIndex < 10; frameIndex += 1 {
+		if isStrike(game.TotalRolls[iterateNextFrame]) {
+			score += 10 + game.TotalRolls[iterateNextFrame+1] + game.TotalRolls[iterateNextFrame+2]
+			iterateNextFrame += 1
+		}
+
 	}
-	return booleanVal
+	return score
 }
 
 // Strike Function
 func isStrike(rollOne int) bool {
 	booleanVal := false
 	if rollOne == 10 {
+		booleanVal = true
+	}
+	return booleanVal
+}
+
+// Spare Function
+func isSpare(rollOne int, rollTwo int) bool {
+	scorePerFrame := rollOne + rollTwo
+	booleanVal := false
+	if scorePerFrame == 10 {
 		booleanVal = true
 	}
 	return booleanVal
