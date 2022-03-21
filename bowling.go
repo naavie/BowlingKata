@@ -6,28 +6,22 @@ import (
 )
 
 // Bowling Game Data
-type Game2 struct {
+type Game struct {
 	score     int
 	scorecard string
 }
 
 // New Game - No Players Yet
-func NewBowlingGame(scorecard string) Game2 {
+func NewBowlingGame(scorecard string) Game {
 	rune1 := []rune(scorecard)[0]
-	runestring := string(rune1)
-	fmt.Print(runestring)
-	val, _ := strconv.Atoi(runestring)
-
-	return Game2{
-		score: val,
+	runestring1 := string(rune1)
+	fmt.Print(runestring1)
+	val, _ := strconv.Atoi(runestring1)
+	return Game{
+		score:     val,
+		scorecard: scorecard,
 	}
 }
 
 //  Sean's code above
-
-// ----------------------------------------------------------------------------------------------
-
-type Game struct {
-	TotalRolls [21]int
-	current    int
-}
+// ----------------------------------------------------------------------
