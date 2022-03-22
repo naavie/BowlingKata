@@ -21,5 +21,15 @@ func TestWhenNPinsKnockedInFrameOne(t *testing.T) {
 // probably need to use slices. Need to know how to convert slices of strings to ints.
 
 func TestWhenXPinsKnockedInEveryFrame(t *testing.T) {
+	blankScoreCard := [21]int{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+	x := []int{1, 2, 3, 4, 5, 6, 7, 8, 9}
+	pins := x
+	for i := pins; i <= len(blankScoreCard); i++ {
+		pins := [9]int{1, 2, 3, 4, 5, 6, 7, 8, 9}
+		blankScoreCard := [21]int{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 
+		if blankScoreCard != i {
+			t.Errorf("Expected %v but got %v", pins, blankScoreCard)
+		}
+	}
 }
