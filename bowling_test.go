@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"strconv"
 	"testing"
 )
@@ -20,10 +21,10 @@ func TestWhenNPinsKnockedInFrameOne(t *testing.T) {
 // 1 to 9 pins for every bowl, every frame
 // probably need to use slices. Need to know how to convert slices of strings to ints.
 
-func TestWhenXPinsKnockedInEveryFrame(t *testing.T) {
+func TestWhenXPinsKnockedInFirstThrowEveryFrame(t *testing.T) {
 	for i := 1; i <= 9; i++ {
 		x := strconv.Itoa // converts int to string
-		frameOne := NewBowlingGame(x(i) + "-").score
+		frameOne := NewBowlingGame(x(i) + "--").score
 		frameTwo := NewBowlingGame(x(i) + "--").score
 		frameThree := NewBowlingGame(x(i) + "--").score
 		frameFour := NewBowlingGame(x(i) + "--").score
@@ -37,6 +38,7 @@ func TestWhenXPinsKnockedInEveryFrame(t *testing.T) {
 		// tests
 		if frameOne != i {
 			t.Errorf("Expected %v but got %v", i, frameOne)
+			fmt.Println("frameOne =", frameOne)
 		}
 		if frameTwo != i {
 			t.Errorf("Expected %v but got %v", i, frameTwo)
@@ -74,4 +76,7 @@ func TestWhenXPinsKnockedInEveryFrame(t *testing.T) {
 			t.Errorf("Expected %v but got %v", i, frameTen)
 		}
 	}
+}
+
+func NumberOfPinsKnockedInEveryFrame(t *testing.T) {
 }
