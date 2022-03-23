@@ -11,6 +11,21 @@ type Game struct {
 	scorecard string
 }
 
+type Frame struct {
+	frameOne   string
+	frameTwo   string
+	frameThree string
+	frameFour  string
+	frameFive  string
+	frameSix   string
+	frameSeven string
+	frameEight string
+	frameNine  string
+	frameTen   string
+
+	frameScore string
+}
+
 // New Game - No Players Yet
 func NewBowlingGame(scorecard string) Game {
 	rune1 := []rune(scorecard)[0]
