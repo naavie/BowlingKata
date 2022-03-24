@@ -13,24 +13,18 @@ type GameCard struct {
 
 // Type: Every Frame in Bowling Game
 type Frame struct {
-	frameOne   string
-	frameTwo   string
-	frameThree string
-	frameFour  string
-	frameFive  string
-	frameSix   string
-	frameSeven string
-	frameEight string
-	frameNine  string
-	frameTen   string
+	frameOne   int
+	frameTwo   int
+	frameThree int
+	frameFour  int
+	frameFive  int
+	frameSix   int
+	frameSeven int
+	frameEight int
+	frameNine  int
+	frameTen   int
 
-	frameScore string
-
-	GameCard
-}
-
-type Score interface {
-	TotalScore(int, int, int) int
+	GameCard string
 }
 
 // New Game - No Players Yet
@@ -48,3 +42,42 @@ func NewBowlingGame(scorecard string) GameCard {
 
 //  Sean's code above
 // ----------------------------------------------------------------------
+
+func (f *Frame) playerScore(currentScore int, rollOneScore int, rollTwoScore int) {
+	currentScore = 0
+
+	for i := 1; i <= 10; i++ {
+		currentScore = rollOneScore + rollTwoScore
+		if rollOneScore == 10 { //strike
+			rollTwoScore = 0
+			currentScore = rollOneScore
+			f.frameOne = currentScore
+
+		} else if rollOneScore+rollTwoScore == 10 { // spare
+			currentScore = rollOneScore + rollTwoScore
+			f.frameOne = currentScore
+
+		} else if rollOneScore+rollTwoScore != 10 {
+			currentScore = rollOneScore + rollTwoScore
+			f.frameOne = currentScore
+
+		}
+
+		for i := 1; i <= 10; i++ {
+			currentScore = f.frameOne
+			if rollOneScore == 10 { //strike
+				rollTwoScore = 0
+				currentScore = rollOneScore + rollTwoScore
+				f.frameTwo = f.frameOne + currentScore
+
+			} else if rollOneScore+rollTwoScore == 10 { // spare
+				currentScore = rollOneScore + rollTwoScore
+				f.frameTwo = f.frameOne + currentScore
+
+			} else if rollOneScore+rollTwoScore != 10 {
+				currentScore = rollOneScore + rollTwoScore
+				f.frameTwo = f.frameOne + currentScore
+			}
+		} // etc.. for the remaining frames
+	}
+}
